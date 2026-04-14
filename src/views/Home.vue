@@ -50,31 +50,37 @@
       </div>
     </section>
 
-    <!-- VIDEO SHOWCASE - Smaller & Better Balanced -->
-    <section class="py-20 bg-slate-900">
-      <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <span class="text-osGreen-500 text-sm font-bold tracking-widest uppercase">Watch</span>
-          <h2 class="text-4xl font-bold text-white mt-3">Our Students in Action</h2>
+          <!-- VIDEO SHOWCASE - Smaller & Better Balanced -->
+      <section class="py-20 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-white mb-4">
+              Watch Our Students in Action
+            </h2>
+            <p class="text-slate-400 max-w-md mx-auto">
+              Real moments from the Software Engineering Bootcamp
+            </p>
+          </div>
+
+          <!-- Video Card -->
+          <div class="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black">
+            <div class="relative w-full aspect-video bg-black">
+              <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/O16mHnFcgic"
+                title="Students coding during the Software Engineering Bootcamp"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <p class="text-center text-slate-400 mt-6 text-sm">
+            Students coding during the Software Engineering Bootcamp
+          </p>
         </div>
-
-       <!-- Smaller Video Card -->
-<div class="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black">
-  <div class="relative w-full aspect-video bg-black">
-    <iframe 
-      class="w-full h-full"
-      src="https://www.youtube.com/embed/O16mHnFcgic"
-      title="Students coding during the Software Engineering Bootcamp"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-  </div>
-</div>
-
-<p class="text-center text-slate-400 mt-6 text-sm">
-  Students coding during the Software Engineering Bootcamp
-</p>
+      </section>
     <!-- PROGRAMS PHOTO GALLERY -->
     <section class="py-24 bg-slate-100 dark:bg-slate-950">
       <div class="max-w-7xl mx-auto px-6">

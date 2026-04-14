@@ -91,16 +91,16 @@ import { ref } from 'vue'
 
 const team = ref([
   {
-    name: 'Emmanuel Doe',
+    name: 'Samuel David Nayreau',
     role: 'Founder & Lead Engineer',
     bio: 'Visionary full-stack developer building scalable systems and civic tech solutions that empower Liberian communities.',
-    image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=800'
+    image: '/src/assets/sam.png' 
   },
   {
-    name: 'Sarah Freeman',
-    role: 'Head of Education',
-    bio: 'Passionate educator and curriculum architect dedicated to making world-class tech education accessible to every Liberian youth.',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?q=80&w=800'
+    name: 'Jedidiah Broderick',
+    role: 'Digital Solutions',
+bio: 'Innovative digital strategist, a seasoned professional Electrical Engineer, with 7 years of experience in digital transformation.',
+    image: '/src/assets/jd.png'
   },
   {
     name: 'Marcus Tarnue',

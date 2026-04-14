@@ -19,7 +19,7 @@
             </div>
             <div>
               <h3 class="font-bold text-sm text-white">Open Source Assistant</h3>
-              <p class="text-xs text-osGreen-400">Online & ready to help</p>
+              <p class="text-xs text-osGreen-400">Online • Powered by OSTL</p>
             </div>
           </div>
           <button @click="isOpen = false" class="hover:bg-white/20 p-2 rounded-full transition-colors">
@@ -32,8 +32,10 @@
           
           <div v-if="messages.length === 0" class="text-center py-8">
             <div class="text-4xl mb-3">👋</div>
-            <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Hello there!</p>
-            <p class="text-slate-500 dark:text-slate-500 text-xs mt-2 px-4">I can answer questions about our programs, services, location, or connect you with our team.</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm font-medium">Hello! I'm the Open Source Assistant</p>
+            <p class="text-slate-500 dark:text-slate-500 text-xs mt-2 px-4">
+              Ask me anything about our bootcamps, services, team, or how we’re bridging the digital divide in Liberia.
+            </p>
           </div>
 
           <!-- Messages -->
@@ -66,7 +68,7 @@
               v-model="messageInput" 
               @keyup.enter="sendMessage"
               type="text" 
-              placeholder="Ask me anything..." 
+              placeholder="Ask me anything about OSTL..." 
               class="flex-1 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white placeholder-slate-400 border-none focus:outline-none focus:ring-2 focus:ring-osGreen-500 text-sm transition-all"
             >
             <button 
@@ -108,56 +110,87 @@ const scrollToBottom = async () => {
   }
 }
 
-// SMART BOT KNOWLEDGE ENGINE
+// Enhanced Knowledge Base
 const generateBotResponse = (input) => {
-  const text = input.toLowerCase()
-  
-  if (text.includes('program') || text.includes('learn') || text.includes('study') || text.includes('bootcamp')) {
-    return "<strong>Our Programs:</strong> We offer a 6-month Software Engineering Bootcamp, Arduino & IoT Training, Mobile App Creation, and basic Digital Literacy courses. <br><br>Navigate to the <strong>Programs</strong> page in the menu to see them all!"
+  const text = input.toLowerCase().trim()
+
+  // About the chatbot / "tell me more about you"
+  if (text.includes('who are you') || text.includes('tell me more about you') || text.includes('about yourself') || text.includes('your name')) {
+    return `I'm the <strong>Open Source Assistant</strong>, an AI chatbot created by the <strong>Open Source Team Liberia (OSTL)</strong>.<br><br>I'm here to help you learn more about our work, programs, services, and impact in Liberia. What would you like to know about us?`
   }
-  if (text.includes('service') || text.includes('build') || text.includes('app') || text.includes('website') || text.includes('hire')) {
-    return "<strong>Our Services:</strong> We build Custom Web Apps, Native Mobile Apps, Embedded Systems (Arduino), and provide Corporate IT Training. <br><br>Check out our <strong>Services</strong> page for more details."
+
+  // About the organization
+  if (text.includes('about us') || text.includes('about ostl') || text.includes('mission') || text.includes('who is open source team')) {
+    return `<strong>Open Source Team Liberia (OSTL)</strong> is a tech collective based in Monrovia, Liberia.<br><br>Our mission is to <strong>bridge the digital divide</strong> by empowering Liberian youth and communities through open-source technology, STEM education, and hands-on innovation.<br><br>We believe in: Innovate • Educate • Elevate. 🌍`
   }
-  if (text.includes('contact') || text.includes('phone') || text.includes('email') || text.includes('reach')) {
-    return "You can reach us at:<br>📧 <strong>hello@opensource.lr</strong><br>📞 <strong>+231 77 000 0000</strong><br><br>Or use the Contact page form!"
+
+  // Team members / Our team
+  if (text.includes('team') || text.includes('members') || text.includes('founder') || text.includes('who works')) {
+    return `Our team consists of passionate Liberian developers, educators, and tech enthusiasts dedicated to digital inclusion.<br><br>While we don't list every name publicly yet, we are a growing group of young professionals running bootcamps, building solutions, and partnering with organizations like Orange Digital Center.<br><br>Want to join the team or collaborate? Let us know!`
   }
-  if (text.includes('where') || text.includes('location') || text.includes('address')) {
-    return "We are headquartered in <strong>Monrovia, Liberia</strong>, but our digital reach and services extend globally! 🌍"
+
+  // Programs & Bootcamps
+  if (text.includes('program') || text.includes('bootcamp') || text.includes('learn') || text.includes('study') || text.includes('course')) {
+    return `<strong>Our Programs:</strong><br>
+    • 6-month Software Engineering Bootcamp<br>
+    • Arduino & IoT Training<br>
+    • AI-Powered Career Accelerator<br>
+    • Mobile App Development<br>
+    • Digital Literacy & Cyber Hygiene workshops<br><br>
+    Many programs offer scholarships for marginalized youth. Check our <strong>Programs</strong> page for details and upcoming cohorts!`
   }
-  if (text.includes('who') || text.includes('about') || text.includes('mission') || text.includes('what is')) {
-    return "<strong>Open Source Team Liberia</strong> is a collective of developers bridging the digital divide in Africa. We build software solutions and run bootcamps to equip youth with future-proof skills."
+
+  // Services
+  if (text.includes('service') || text.includes('build') || text.includes('hire') || text.includes('app') || text.includes('website')) {
+    return `<strong>Our Services:</strong><br>
+    • Custom Web & Mobile App Development<br>
+    • Embedded Systems & Arduino Solutions<br>
+    • Corporate IT Training & Workshops<br>
+    • Open-source project consulting<br><br>
+    We help businesses and organizations turn ideas into real digital solutions.`
   }
-  if (text.includes('hello') || text.includes('hi') || text.includes('hey')) {
-    return "Hello! How can I help you today? You can ask me about our services, programs, or how to contact us."
+
+  // Location & Contact
+  if (text.includes('where') || text.includes('location') || text.includes('address') || text.includes('monrovia')) {
+    return `We are based in <strong>Monrovia, Liberia</strong>.<br><br>Our work reaches across the country and beyond through online programs and partnerships.`
   }
-  if (text.includes('free') || text.includes('cost') || text.includes('price')) {
-    return "We offer fully-funded scholarships for marginalized youth alongside paid corporate training to sustain our initiatives."
+
+  if (text.includes('contact') || text.includes('email') || text.includes('phone') || text.includes('whatsapp')) {
+    return `📧 Email: hello@opensource.lr<br>
+    📱 WhatsApp: <a href="https://wa.me/231778288747" target="_blank" class="text-osGreen-600 underline">+231 77 828 8747</a><br><br>
+    Feel free to message us anytime!`
   }
-  
-  // Default fallback
-  return "I'm not quite sure about that! But our human team would love to help.<br><br>👉 <a href='https://wa.me/231778288747' target='_blank' class='text-osGreen-600 font-bold underline'>Click here to chat with us on WhatsApp</a>"
+
+  if (text.includes('free') || text.includes('cost') || text.includes('scholarship') || text.includes('price')) {
+    return `We offer <strong>fully-funded scholarships</strong> for talented but disadvantaged young Liberians.<br><br>We also provide paid corporate training to help sustain our mission.`
+  }
+
+  if (text.includes('hello') || text.includes('hi') || text.includes('hey') || text.includes('good morning')) {
+    return `Hello! 👋 I'm the Open Source Assistant from Open Source Team Liberia.<br><br>How can I help you today?`
+  }
+
+  // Default smart fallback
+  return `Thanks for your question!<br><br>I'm still learning, but our team at Open Source Team Liberia would be happy to help.<br><br>Would you like me to connect you on WhatsApp?<br><a href="https://wa.me/231778288747" target="_blank" class="text-osGreen-600 font-bold underline">Chat with us on WhatsApp →</a>`
 }
 
 const sendMessage = async () => {
   if (!messageInput.value.trim()) return
 
-  const userText = messageInput.value
+  const userText = messageInput.value.trim()
   
-  // Add user message to chat
+  // Add user message
   messages.value.push({ type: 'user', text: userText })
   messageInput.value = ''
   await scrollToBottom()
 
   isSending.value = true
   
-  // Simulate AI "thinking" delay
+  // Simulate thinking time
   setTimeout(() => {
-    messages.value.push({
-      type: 'bot',
-      text: generateBotResponse(userText)
-    })
+    const botReply = generateBotResponse(userText)
+    messages.value.push({ type: 'bot', text: botReply })
     isSending.value = false
     scrollToBottom()
-  }, 1200)
+  }, 1100)
 }
 </script>
