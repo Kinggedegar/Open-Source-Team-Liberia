@@ -14,7 +14,7 @@
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
         <div class="max-w-3xl">
           <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-2xl border border-white/20 px-6 py-3 rounded-3xl mb-10">
-            <img :src="'/src/assets/OSTL logo.jpeg'" alt="Open Source Liberia" class="h-10 w-auto">
+            <img src="/src/assets/OSTL logo.jpeg" alt="Open Source Liberia" class="h-10 w-auto">
             <span class="text-white/70 text-sm font-medium tracking-widest">MONROVIA • LIBERIA</span>
           </div>
 
@@ -58,25 +58,23 @@
           <h2 class="text-4xl font-bold text-white mt-3">Our Students in Action</h2>
         </div>
 
-        <!-- Smaller Video Card -->
-        <div class="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black">
-          <video 
-            ref="videoPlayer"
-            class="w-full aspect-video"
-            controls
-            poster="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200"
-          >
-            <source src="https://youtu.be/O16mHnFcgic?si=sbmx52Kt4PyanDM-" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
+       <!-- Smaller Video Card -->
+<div class="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black">
+  <div class="relative w-full aspect-video bg-black">
+    <iframe 
+      class="w-full h-full"
+      src="https://www.youtube.com/embed/O16mHnFcgic"
+      title="Students coding during the Software Engineering Bootcamp"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
 
-        <p class="text-center text-slate-400 mt-6 text-sm">
-          Students coding during the Software Engineering Bootcamp
-        </p>
-      </div>
-    </section>
-
+<p class="text-center text-slate-400 mt-6 text-sm">
+  Students coding during the Software Engineering Bootcamp
+</p>
     <!-- PROGRAMS PHOTO GALLERY -->
     <section class="py-24 bg-slate-100 dark:bg-slate-950">
       <div class="max-w-7xl mx-auto px-6">
