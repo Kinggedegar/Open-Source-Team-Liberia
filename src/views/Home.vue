@@ -123,34 +123,34 @@ const logoUrl = ref('https://storage.googleapis.com/a1aa/image/nJ030QzH9X5jH1q50
 
 const gallery = ref([
   {
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800",
-    caption: "Late night coding",
-    program: "Software Engineering Bootcamp"
+    image: "/src/assets/career day.jpg",
+    caption: "Career Day Panel Discussion",
+    program: "Software Social Impacts"
   },
   {
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800",
-    caption: "Mobile App UI Design",
+    image: "/src/assets/womens day.jpg",
+    caption: "International Women's Day Workshop",
     program: "Mobile Development"
   },
   {
-    image: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=800",
-    caption: "Hardware Workshop",
-    program: "Arduino & IoT"
+    image: "/src/assets/student2.jpg",
+    caption: "Hands-on Coding Session and Problem Solving",
+    program: "Development Bootcamp"
   },
   {
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?q=80&w=800",
+    image: "/src/assets/students.jpg",
     caption: "Graduation Day",
     program: "Digital Literacy"
   },
   {
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800",
-    caption: "Team Project Presentation",
-    program: "Social Impact Lab"
+    image: "/src/assets/Team.jpg",
+    caption: "Community Outreach Event, Envronmental Awareness",
+    program: "Social Impact"
   },
   {
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800",
-    caption: "Building IoT Devices",
-    program: "Hardware Training"
+    image: "/src/assets/working.jpg",
+    caption: "Team Meeting and Project Planning",
+    program: "Meeting Section"
   }
 ])
 

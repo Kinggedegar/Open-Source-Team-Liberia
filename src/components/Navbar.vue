@@ -13,11 +13,11 @@
         >
           <img 
             class="h-8 w-auto transition-transform duration-300 group-hover:scale-105" 
-            src="https://storage.googleapis.com/a1aa/image/nJ030QzH9X5jH1q50W7mQ0YfHwUv517vV02xTee9Qz0.jpg"
+            src="https://www.facebook.com/photo/?fbid=122094640106683910&set=a.122094578126683910"
             alt="Logo"
           >
           <span class="text-sm font-semibold text-white/90 dark:text-white tracking-wide">
-            Open Source 
+            Open Source Team
             <span class="text-osGreen-400">LIBERIA</span>
           </span>
         </router-link>

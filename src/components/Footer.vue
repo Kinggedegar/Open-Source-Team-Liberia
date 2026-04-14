@@ -7,7 +7,7 @@
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-6">
             <img class="h-10 w-auto" src="/src/assets/OSTL logo.jpeg" alt="Logo">
-            <span class="font-bold text-lg text-slate-900 dark:text-white">Open Source Team it <span class="text-osGreen-500">LIBERIA</span></span>
+            <span class="font-bold text-lg text-slate-900 dark:text-white">Open Source Team <span class="text-osGreen-500">LIBERIA</span></span>
           </div>
           <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 max-w-sm">
             Bridging the digital divide in Africa through high-impact technology solutions, education, and sustainable innovation for communities in Liberia.
